@@ -1,0 +1,4 @@
+structuredPythonMotionSolver.C
+pythonMotionBridge.C
+
+LIB = $(FOAM_USER_LIBBIN)/libstructuredPythonMotionSolver

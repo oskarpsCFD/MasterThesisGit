@@ -1,0 +1,30 @@
+
+bool refinement;
+word refinementField;
+scalar timeCoefficient;
+
+readRefinementDict(mesh, refinement, refinementField, timeCoefficient);
+
+bool pythonMovedMesh = false;
+
+if (refinement)
+{
+    tmp<pointVectorField> refinementPointField =
+	makeRefinementPointField(mesh, runTime, refinementField, p, U);
+
+    StructuredMeshData structuredMeshData = readStructuredMeshData(mesh);
+
+    applyPythonRefinementMotion
+    (
+	mesh,
+	structuredMeshData,
+	refinementPointField(),
+	timeCoefficient
+    );
+
+    pythonMovedMesh = true;
+
+    Info<< "Applied Python mesh deformation with timeCoefficient = "
+	<< timeCoefficient << nl;
+}
+

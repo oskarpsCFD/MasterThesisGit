@@ -1,0 +1,5 @@
+SOURCE = \
+structuredPythonMotionSolver.C \
+pythonMotionBridge.C \
+
+# sources

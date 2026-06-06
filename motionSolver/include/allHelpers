@@ -1,0 +1,326 @@
+#ifndef dictionaryTools_H
+#define dictionaryTools_H
+
+#include "IOdictionary.H"
+#include "fvMesh.H"
+
+inline void readRefinementDict
+(
+    const fvMesh& mesh,
+    bool& refinement,
+    word& fieldName,
+    scalar& timeCoefficient
+)
+{
+    IOdictionary rRefinementDict
+    (
+        IOobject
+        (
+            "rRefinementDict",      // file name
+            mesh.time().system(),  // system directory
+            mesh,
+            IOobject::MUST_READ,
+            IOobject::NO_WRITE
+        )
+    );
+
+    const dictionary& customRefinement =
+        rRefinementDict.subDict("customRefinement");
+	
+    customRefinement.lookup("refinement") >> refinement;
+    customRefinement.lookup("field") >> fieldName;
+    customRefinement.lookup("timeCoefficient") >> timeCoefficient;
+}
+
+#endif
+
+
+
+#ifndef pythonFieldConversions_H
+#define pythonFieldConversions_H
+
+#include <pybind11/numpy.h>
+namespace py = pybind11;
+
+py::array_t<double> volScalarFieldToNumpy(const volScalarField& fld)
+{
+    const scalarField& sf = fld.internalField();
+    const label n = sf.size();
+
+    py::array_t<double> arr(n);
+    auto a = arr.mutable_unchecked<1>();
+
+    for (label i = 0; i < n; ++i)
+    {
+        a(i) = sf[i];
+    }
+    return arr;
+}
+
+py::array_t<double> pointsToNumpy(const pointField& pts)
+{
+    const label n = pts.size();
+    py::array_t<double> arr({n, 3});
+    auto a = arr.mutable_unchecked<2>();
+
+    for (label i = 0; i < n; ++i)
+    {
+        a(i,0) = pts[i].x();
+        a(i,1) = pts[i].y();
+        a(i,2) = pts[i].z();
+    }
+    return arr;
+}
+
+
+inline py::array_t<double> pointVectorFieldToNumpy(const pointVectorField& fld)
+{
+    const vectorField& vf = fld.internalField();
+    const label n = vf.size();
+
+    py::array_t<double> arr({n, 3});
+    auto a = arr.mutable_unchecked<2>();
+
+    for (label i = 0; i < n; ++i)
+    {
+        a(i, 0) = vf[i].x();
+        a(i, 1) = vf[i].y();
+        a(i, 2) = vf[i].z();
+    }
+
+    return arr;
+}
+#endif
+
+
+
+#ifndef pythonInterface_H
+#define pythonInterface_H
+
+#include <pybind11/embed.h>
+#include "pythonFieldConversions.H"
+
+namespace py = pybind11;
+
+py::object callPythonPostProcessing
+(
+    py::module_& post,
+    const volScalarField& p,
+    const fvMesh& mesh
+)
+{
+    return post.attr("process")
+    (
+        volScalarFieldToNumpy(p),
+        pointsToNumpy(mesh.points())
+    );
+}
+
+py::array_t<double> pointScalarFieldToNumpy(const pointScalarField& fld)
+{
+    const scalarField& sf = fld.internalField();
+    const label n = sf.size();
+
+    py::array_t<double> arr(n);
+    auto a = arr.mutable_unchecked<1>();
+
+    for (label i = 0; i < n; ++i)
+    {
+        a(i) = sf[i];
+    }
+
+    return arr;
+}
+
+
+#endif
+
+
+
+
+#ifndef pythonRefinement_H
+#define pythonRefinement_H
+
+#include <pybind11/embed.h>
+#include <pybind11/numpy.h>
+
+namespace py = pybind11;
+
+inline py::object callPythonRefinement
+(
+    const pointVectorField& field,
+    const fvMesh& mesh,
+    const word& refinementField,
+    const scalar timeCoefficient
+)
+{
+    py::module_ post = py::module_::import("postPressure");
+
+    return post.attr("processVector")(
+        pointVectorFieldToNumpy(field),
+        pointsToNumpy(mesh.points()),
+        std::string(refinementField),
+        timeCoefficient
+    );
+}
+
+#endif
+
+#ifndef readStructuredMesh_H
+#define readStructuredMesh_H
+
+#include "fvMesh.H"
+#include "pointField.H"
+#include "pointIOField.H"
+#include "labelIOList.H"
+
+inline void readStructuredMesh
+(
+    const fvMesh& mesh,
+    pointField& originalPoints,
+    labelList& originalToFoamPoint
+)
+{
+    pointIOField originalPointsIO
+    (
+        IOobject
+        (
+            "originalPoints",
+            mesh.time().constant()/"structuredMesh",
+            mesh,
+            IOobject::MUST_READ,
+            IOobject::NO_WRITE
+        )
+    );
+
+    labelIOList originalToFoamPointIO
+    (
+        IOobject
+        (
+            "originalToFoamPoint",
+            mesh.time().constant()/"structuredMesh",
+            mesh,
+            IOobject::MUST_READ,
+            IOobject::NO_WRITE
+        )
+    );
+
+    originalPoints = originalPointsIO;
+    originalToFoamPoint = originalToFoamPointIO;
+}
+
+#endif
+
+#ifndef refinementFieldHelper_H
+#define refinementFieldHelper_H
+
+#include "fvCFD.H"
+#include "volPointInterpolation.H"
+
+inline tmp<pointVectorField> makeRefinementPointField
+(
+    const fvMesh& mesh,
+    const Time& runTime,
+    const word& refinementField,
+    const volScalarField& p,
+    const volVectorField& U
+)
+{
+    if (refinementField == "p")
+    {
+        Info<< "Using point-interpolated gradient of p" << endl;
+
+        volVectorField gradP
+        (
+            IOobject
+            (
+                "gradP",
+                runTime.timeName(),
+                mesh,
+                IOobject::NO_READ,
+                IOobject::NO_WRITE
+            ),
+            fvc::grad(p)
+        );
+
+        return tmp<pointVectorField>
+        (
+            new pointVectorField
+            (
+                IOobject
+                (
+                    "gradPPoint",
+                    runTime.timeName(),
+                    mesh,
+                    IOobject::NO_READ,
+                    IOobject::NO_WRITE
+                ),
+                volPointInterpolation::New(mesh).interpolate(gradP)
+            )
+        );
+    }
+    else if (refinementField == "U")
+    {
+        Info<< "Using vector field U" << endl;
+
+        return tmp<pointVectorField>
+        (
+            new pointVectorField
+            (
+                IOobject
+                (
+                    "UPoint",
+                    runTime.timeName(),
+                    mesh,
+                    IOobject::NO_READ,
+                    IOobject::NO_WRITE
+                ),
+                volPointInterpolation::New(mesh).interpolate(U)
+            )
+        );
+    }
+    else if (refinementField == "w" || refinementField == "vorticity")
+    {
+        Info<< "Using computed vorticity field" << endl;
+
+        volVectorField omegaField
+        (
+            IOobject
+            (
+                "omega",
+                runTime.timeName(),
+                mesh,
+                IOobject::NO_READ,
+                IOobject::NO_WRITE
+            ),
+            fvc::curl(U)
+        );
+
+        return tmp<pointVectorField>
+        (
+            new pointVectorField
+            (
+                IOobject
+                (
+                    "omegaPoint",
+                    runTime.timeName(),
+                    mesh,
+                    IOobject::NO_READ,
+                    IOobject::NO_WRITE
+                ),
+                volPointInterpolation::New(mesh).interpolate(omegaField)
+            )
+        );
+    }
+    else
+    {
+        FatalErrorInFunction
+            << "Unsupported refinement field: " << refinementField << nl
+            << "Supported choices are p, U, w, vorticity"
+            << exit(FatalError);
+
+        return tmp<pointVectorField>(nullptr);
+    }
+}
+
+#endif
