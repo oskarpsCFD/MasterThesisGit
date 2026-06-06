@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca0a89c7-8f4c-419a-b3c8-1bf2c4e97a3b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TTM/BoundaryProjection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TTM/NeumannSolver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TTM/TTMSolver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TTM/ThomasMiddlecoff.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TTM/stitchBoundaryDictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../refineMeshOptimized/TTM/HelperFunctions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../refineMeshOptimized/TTM/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/constant/structuredMesh/originalPoints" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/constant/structuredMesh/originalPoints" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/constant/thermophysicalProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/constant/thermophysicalProperties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/runSimple.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/runSimple.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/system/controlDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/system/controlDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/system/fvSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/system/fvSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/GCI.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/GCI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/constant/structuredMesh/originalPoints" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/constant/structuredMesh/originalPoints" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/constant/thermophysicalProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/constant/thermophysicalProperties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/runSimple.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/runSimple.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/system/controlDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/system/controlDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/system/fvSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/system/fvSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/constant/structuredMesh/originalPoints" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/constant/structuredMesh/originalPoints" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/constant/thermophysicalProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/constant/thermophysicalProperties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/controlDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/controlDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/fvSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/fvSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/rRefinementDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/rRefinementDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/shockLocation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/shockLocation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/shock_locations.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/shock_locations.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/MInf0_747AOA2_01/courseCase/system/controlDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/MInf0_747AOA2_01/courseCase/system/controlDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/MInf0_747AOA2_01/courseCase/system/fvSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/MInf0_747AOA2_01/courseCase/system/fvSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/Validate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validation/Validate.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/cp_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validation/cp_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/cp_residual.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/inspoBilde.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/plotCoefficients.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validation/plotCoefficients.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/shock_cp_avg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/shock_position_histogram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/validation_compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validation/validation_compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validationTrue/validateAll.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validationTrue/validateAll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/plotScalar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/plotScalar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/plotScalarComparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/plotScalarComparison.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/scalar_Ma_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/scalar_Ma_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/scalar_grad(p)_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/scalar_grad(p)_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/scalar_p_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/scalar_p_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/scalar_p_medium.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/scalar_p_medium.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/refining/ducros_cache/step_0000.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/refining/phi_cache/step_0000.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../figures/Domain.png" beforeDir="false" afterPath="$PROJECT_DIR$/../figures/Domain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenerateMesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/GenerateMesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry/Cases/ConcentricCylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Geometry/Cases/ConcentricCylinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry/Cases/Horseshoe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Geometry/Cases/Horseshoe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry/Cases/SymmetricAerofoil.py" beforeDir="false" afterPath="$PROJECT_DIR$/Geometry/Cases/SymmetricAerofoil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry/ParametrisizedCurves.py" beforeDir="false" afterPath="$PROJECT_DIR$/Geometry/ParametrisizedCurves.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plotting/LogicalGridPlotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plotting/LogicalGridPlotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFI/Different geometry" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meshGenerationFiles/CellPointGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/meshGeneration/CellAndPointGeneration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meshGenerationFiles/WriteStructuredMeshFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/meshGeneration/CreateStructuredMesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meshGenerationFiles/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TTM/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meshGenerationFiles/generatePointFields.py" beforeDir="false" afterPath="$PROJECT_DIR$/meshGeneration/OpenFOAMToStructurdeMesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meshGenerationFiles/writeTopoSetPointFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/meshGeneration/writeTopoSetPointFiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oldP/ParametrisizedCurves.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oldP/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oldP/clusterFunctins.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/.idea/winslow_refactored.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/BoundaryRedistribution.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/HelperFunctions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/NeumannSolver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/stitchBoundaryDictionary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/weightFunctions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/winslowSolver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/Geometry/Cases/Horseshoe.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/Geometry/Cases/Horseshoe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/Geometry/Cases/SymmetricAerofoil.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/Geometry/Cases/SymmetricAerofoil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/Geometry/Cases/UnitSquare.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/Geometry/Cases/UnitSquare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/Parametrisations/ParametrisizedCurves.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/Parametrisations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/Parametrisations/clusterFunctins.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/RefineMesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/RefineMesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/meshGenerationFiles/CellPointGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/meshGenerationFiles/CellPointGeneration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/meshGenerationFiles/WriteStructuredMeshFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/meshGenerationFiles/WriteStructuredMeshFiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/meshGenerationFiles/loadData.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/meshGenerationFiles/loadData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/meshGenerationFiles/writeTopoSetPointFiles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/winslow/BoundaryRedistribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/TTM/BoundaryProjection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/winslow/HelperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/TTM/HelperFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/winslow/NeumannSolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/TTM/NeumannSolver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/winslow/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/meshGeneration/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/winslow/boundaryEquiRedist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/winslow/stitchBoundaryDictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/TTM/stitchBoundaryDictionary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/winslow/weightFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/TTM/ThomasMiddlecoff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../refineMeshOptimized/winslow/winslowSolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../refineMeshOptimized/TTM/TTMSolver.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3ByZUtsVzbmn5DqAicKhCXoPOvT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.BoundaryRedistribution.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GenerateMesh.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca0a89c7-8f4c-419a-b3c8-1bf2c4e97a3b" name="Changes" comment="" />
+      <created>1775463290221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775463290221</updated>
+      <workItem from="1775463295878" duration="47000" />
+      <workItem from="1775463984367" duration="2230000" />
+      <workItem from="1775468266943" duration="19422000" />
+      <workItem from="1775560325971" duration="5423000" />
+      <workItem from="1775740592298" duration="4779000" />
+      <workItem from="1775751260990" duration="1879000" />
+      <workItem from="1775814008898" duration="2555000" />
+      <workItem from="1776087269801" duration="2603000" />
+      <workItem from="1776153747770" duration="2211000" />
+      <workItem from="1776339544224" duration="235000" />
+      <workItem from="1776684455826" duration="1491000" />
+      <workItem from="1776865440591" duration="1785000" />
+      <workItem from="1776871733517" duration="2873000" />
+      <workItem from="1777369979275" duration="4348000" />
+      <workItem from="1777532746254" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pythonMeshGeneration$GenerateMesh.coverage" NAME="GenerateMesh Coverage Results" MODIFIED="1777375588716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonMeshGeneration$BoundaryRedistribution.coverage" NAME="BoundaryRedistribution Coverage Results" MODIFIED="1775479497945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/winslow" />
+  </component>
+</project>

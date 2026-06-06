@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca0a89c7-8f4c-419a-b3c8-1bf2c4e97a3b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../pythonMeshGeneration/TTM/BoundaryProjection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonMeshGeneration/TTM/NeumannSolver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonMeshGeneration/TTM/TTMSolver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonMeshGeneration/TTM/ThomasMiddlecoff.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonMeshGeneration/TTM/stitchBoundaryDictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TTM/HelperFunctions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TTM/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/constant/structuredMesh/originalPoints" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/constant/structuredMesh/originalPoints" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/constant/thermophysicalProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/constant/thermophysicalProperties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/runSimple.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/runSimple.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/system/controlDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/system/controlDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/system/fvSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/FineCase/system/fvSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/GCI.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/GCI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/constant/structuredMesh/originalPoints" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/constant/structuredMesh/originalPoints" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/constant/thermophysicalProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/constant/thermophysicalProperties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/runSimple.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/runSimple.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/system/controlDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/system/controlDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/system/fvSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/MediumCase/system/fvSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/constant/structuredMesh/originalPoints" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/constant/structuredMesh/originalPoints" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/constant/thermophysicalProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/constant/thermophysicalProperties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/controlDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/controlDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/fvSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/fvSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/rRefinementDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/courseCase/system/rRefinementDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/shockLocation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/shockLocation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/shock_locations.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/DoubleCycle/shock_locations.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/MInf0_747AOA2_01/courseCase/system/controlDict" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/MInf0_747AOA2_01/courseCase/system/controlDict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/MInf0_747AOA2_01/courseCase/system/fvSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/MInf0_747AOA2_01/courseCase/system/fvSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/Validate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validation/Validate.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/cp_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validation/cp_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/cp_residual.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/inspoBilde.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/plotCoefficients.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validation/plotCoefficients.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/shock_cp_avg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/shock_position_histogram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validation/validation_compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validation/validation_compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/NACA0012/validationTrue/validateAll.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/NACA0012/validationTrue/validateAll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/plotScalar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/plotScalar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/plotScalarComparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/plotScalarComparison.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/scalar_Ma_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/scalar_Ma_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/scalar_grad(p)_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/scalar_grad(p)_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/scalar_p_comparison.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/scalar_p_comparison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/Plotting/scalar_p_medium.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Simulation/Plotting/scalar_p_medium.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/refining/ducros_cache/step_0000.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simulation/refining/phi_cache/step_0000.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../figures/Domain.png" beforeDir="false" afterPath="$PROJECT_DIR$/../figures/Domain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/GenerateMesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/GenerateMesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/Geometry/Cases/Horseshoe.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/Geometry/Cases/Horseshoe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/Plotting/LogicalGridPlotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/Plotting/LogicalGridPlotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/TFI/Different geometry" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/meshGenerationFiles/CellPointGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/meshGeneration/CellAndPointGeneration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/meshGenerationFiles/WriteStructuredMeshFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/meshGeneration/CreateStructuredMesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/meshGenerationFiles/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/TTM/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/meshGenerationFiles/generatePointFields.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/meshGeneration/OpenFOAMToStructurdeMesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/meshGenerationFiles/writeTopoSetPointFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/meshGeneration/writeTopoSetPointFiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/oldP/ParametrisizedCurves.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/oldP/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/oldP/clusterFunctins.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/.idea/winslow_refactored.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/BoundaryRedistribution.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/HelperFunctions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/NeumannSolver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/stitchBoundaryDictionary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/weightFunctions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonMeshGeneration/winslow/winslowSolver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry/Cases/Horseshoe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Geometry/Cases/Horseshoe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry/Cases/SymmetricAerofoil.py" beforeDir="false" afterPath="$PROJECT_DIR$/Geometry/Cases/SymmetricAerofoil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry/Cases/UnitSquare.py" beforeDir="false" afterPath="$PROJECT_DIR$/Geometry/Cases/UnitSquare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parametrisations/ParametrisizedCurves.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parametrisations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parametrisations/clusterFunctins.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RefineMesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/RefineMesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meshGenerationFiles/loadData.py" beforeDir="false" afterPath="$PROJECT_DIR$/meshGenerationFiles/loadData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meshGenerationFiles/writeTopoSetPointFiles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/BoundaryRedistribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/TTM/BoundaryProjection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/HelperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/TTM/HelperFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/NeumannSolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/TTM/NeumannSolver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonMeshGeneration/meshGeneration/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/boundaryEquiRedist.py" beforeDir="false" afterPath="$PROJECT_DIR$/TTM/boundaryEquiRedist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/stitchBoundaryDictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/TTM/stitchBoundaryDictionary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/weightFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/TTM/weightFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winslow/winslowSolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/TTM/TTMSolver.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3ByZUtsVzbmn5DqAicKhCXoPOvT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.BoundaryRedistribution.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GenerateMesh.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RefineMesh.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.Celery" factoryName="Python.Celery.App">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.Celery" factoryName="Python.Celery.Task">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="pythonOptimized_neumann" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca0a89c7-8f4c-419a-b3c8-1bf2c4e97a3b" name="Changes" comment="" />
+      <created>1775463290221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775463290221</updated>
+      <workItem from="1775463295878" duration="47000" />
+      <workItem from="1775463984367" duration="2230000" />
+      <workItem from="1775468266943" duration="19422000" />
+      <workItem from="1775553553997" duration="1294000" />
+      <workItem from="1775555960975" duration="4600000" />
+      <workItem from="1775633531500" duration="18374000" />
+      <workItem from="1775721688528" duration="120000" />
+      <workItem from="1775721837332" duration="5351000" />
+      <workItem from="1775728794617" duration="1852000" />
+      <workItem from="1775735674471" duration="4891000" />
+      <workItem from="1775745459939" duration="5172000" />
+      <workItem from="1775816581319" duration="1962000" />
+      <workItem from="1776064626197" duration="12259000" />
+      <workItem from="1776251986805" duration="8060000" />
+      <workItem from="1776323590792" duration="32000" />
+      <workItem from="1776323634168" duration="23095000" />
+      <workItem from="1776414042077" duration="17000" />
+      <workItem from="1776414080556" duration="10071000" />
+      <workItem from="1776870606741" duration="4028000" />
+      <workItem from="1776929164238" duration="1336000" />
+      <workItem from="1777280096521" duration="6340000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pythonMeshGeneration$GenerateMesh.coverage" NAME="GenerateMesh Coverage Results" MODIFIED="1775478446040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/refineMeshOptimized$RefineMesh.coverage" NAME="RefineMesh Coverage Results" MODIFIED="1775562713525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonMeshGeneration$BoundaryRedistribution.coverage" NAME="BoundaryRedistribution Coverage Results" MODIFIED="1775479497945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/winslow" />
+  </component>
+</project>
