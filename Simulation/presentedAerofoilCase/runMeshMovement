@@ -1,0 +1,13 @@
+c. /usr/lib/openfoam/openfoam2312/etc/bashrc
+
+rm -rf constant/structuredMesh
+rm -r /home/oskarps/MasterOppgave/Simulation/refining/*cache
+cp -r constant/structuredMesh.Orig/ constant/structuredMesh
+foamListTimes -rm
+rm -rf postProcessing/
+rm -f /home/oskarps/MasterOppgave/Simulation/refining/refinedMesh_cache.npz
+
+./cycleRefinement.sh 2000
+foamDictionary -entry customRefinement/refinement -set false system/rRefinementDict
+foamDictionary system/controlDict -entry endTime   -set 2000
+overRhoPimpleDyMFoam

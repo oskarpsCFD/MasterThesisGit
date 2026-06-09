@@ -1,0 +1,98 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+ddtSchemes
+{
+    default         localEuler;
+}
+
+gradSchemes
+{
+    default         Gauss linear;
+
+    limited         cellLimited Gauss linear 1;
+    grad(U)         $limited;
+    grad(nuTilda)   $limited;
+}
+
+divSchemes
+{
+
+    default         none;
+
+    div(phi,U)      Gauss LUST grad(U);//linearUpwind limited;
+
+    energy          Gauss LUST grad(e);//linearUpwind limited;
+    div(phi,e)      $energy;
+    div(phi,K)      $energy;
+    div(phi,Ekp)    $energy;
+
+    turbulence      Gauss limitedLinear 1;
+    div(phi,nuTilda) $turbulence;
+    
+    
+    pressure	    Gauss LUST grad(p);
+    div(phiv,p)     $pressure;
+    div((phi|interpolate(rho)),p) $pressure;
+
+    div(((rho*nuEff)*dev2(T(grad(U)))))    Gauss linear;
+    div(meshPhi,p)  Gauss upwind;
+}
+
+laplacianSchemes
+{
+    default         Gauss linear corrected;
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+fluxRequired
+{
+    default         no;
+    pcorr           ;
+    p               ;
+}
+
+snGradSchemes
+{
+    default         corrected;
+}
+
+wallDist
+{
+    method          meshWave;
+}
+
+oversetInterpolation
+{
+    method          cellVolumeWeight;
+}
+
+fluxRequired
+{
+    default         no;
+    pcorr           ;
+    p               ;
+}
+
+oversetInterpolationSuppressed
+{
+}
+
+
+// ************************************************************************* //

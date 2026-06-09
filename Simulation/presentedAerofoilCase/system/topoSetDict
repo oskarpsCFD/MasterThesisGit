@@ -1,0 +1,143 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+actions
+(
+    // --- Walls: pointSets from boundary point files ---
+
+    {
+        name    leftPoints;
+        type    pointSet;
+        action  new;
+        source  nearestToPoint;
+        sourceInfo
+        {
+            points (#include "leftPoints");
+            maxN 1;
+        }
+    }
+
+    {
+        name    rightPoints;
+        type    pointSet;
+        action  new;
+        source  nearestToPoint;
+        sourceInfo
+        {
+            points (#include "rightPoints");
+            maxN 1;
+        }
+    }
+
+    {
+        name    topPoints;
+        type    pointSet;
+        action  new;
+        source  nearestToPoint;
+        sourceInfo
+        {
+            points (#include "topPoints");
+            maxN 1;
+        }
+    }
+
+    {
+        name    botPoints;
+        type    pointSet;
+        action  new;
+        source  nearestToPoint;
+        sourceInfo
+        {
+            points (#include "botPoints");
+            maxN 2;
+        }
+    }
+
+    // =========================
+    // Face sets from point sets
+    // =========================
+
+    {
+        name    farfieldLeftFaces;
+        type    faceSet;
+        action  new;
+        source  pointToFace;
+        sourceInfo
+        {
+            set    leftPoints;
+            option all;
+        }
+    }
+
+    {
+        name    farfieldRightFaces;
+        type    faceSet;
+        action  new;
+        source  pointToFace;
+        sourceInfo
+        {
+            set    rightPoints;
+            option all;
+        }
+    }
+
+    {
+        name    farfieldTopFaces;
+        type    faceSet;
+        action  new;
+        source  pointToFace;
+        sourceInfo
+        {
+            set    topPoints;
+            option all;
+        }
+    }
+
+    {
+        name    airfoilFaces;
+        type    faceSet;
+        action  new;
+        source  pointToFace;
+        sourceInfo
+        {
+            set    botPoints;
+            option all;
+        }
+    }
+
+    {
+        name    frontFaces;
+        type    faceSet;
+        action  new;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 0 1);
+            cos 0.99;
+        }
+    }
+
+    {
+        name    backFaces;
+        type    faceSet;
+        action  new;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 0 -1);
+            cos 0.99;
+        }
+    }
+);

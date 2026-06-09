@@ -1,0 +1,80 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+pointSync false;
+
+patches
+(
+    {
+        name farfieldLeft;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom set;
+        set farfieldLeftFaces;
+    }
+
+    {
+        name farfieldRight;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom set;
+        set farfieldRightFaces;
+    }
+
+    {
+        name farfieldTop;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom set;
+        set farfieldTopFaces;
+    }
+
+    {
+        name airfoil;
+        patchInfo
+        {
+            type wall;
+        }
+        constructFrom set;
+        set airfoilFaces;
+    }
+
+    {
+        name front;
+        patchInfo
+        {
+            type empty;
+        }
+        constructFrom set;
+        set frontFaces;
+    }
+
+    {
+        name back;
+        patchInfo
+        {
+            type empty;
+        }
+        constructFrom set;
+        set backFaces;
+    }
+);

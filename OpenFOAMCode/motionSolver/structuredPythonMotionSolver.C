@@ -1,3 +1,50 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     |
+    \\  /    A nd           | www.openfoam.com
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+    Copyright (C) 2011-2016 OpenFOAM Foundation
+    Copyright (C) 2021 OpenCFD Ltd.
+-------------------------------------------------------------------------------
+License
+    This file is part of OpenFOAM.
+
+    OpenFOAM is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    OpenFOAM is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+    for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
+
+Application
+    structuredPythonMotionSolver
+
+Group
+    motionSolver
+
+Description
+    Call the python script RefineMesh and provide it with the data from structuredMesh directory the mesh points and flow fields. 
+    
+    The python script will return a deformation vector to apply to the mesh.  
+      
+Author 
+    Oskar P. Sagatun NTNU 2026
+    
+    Developed in accordance with the authors master thesis.
+    
+    	Unstructured mesh generation is a solved problem 
+    	structured mesh generation will never be complete
+   
+\*---------------------------------------------------------------------------*/
+
 #include "structuredPythonMotionSolver.H"
 
 #include "addToRunTimeSelectionTable.H"

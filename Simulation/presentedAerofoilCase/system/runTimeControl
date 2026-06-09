@@ -1,0 +1,29 @@
+stopOnResiduals
+{
+    type            runTimeControl;
+    libs            (utilityFunctionObjects);
+
+    executeControl  timeStep;
+    executeInterval 1;
+
+    satisfiedAction end;
+
+    conditions
+    {
+    	pRes
+    	{
+            type    equationInitialResidual;
+            fields  (p);
+            value   1e-5;
+            mode    minimum;
+        }
+    
+        Ures
+        {
+        	type    equationInitialResidual;
+        	fields  (U);
+        	value   1e-5;
+        	mode    minimum;
+        }
+    }
+}

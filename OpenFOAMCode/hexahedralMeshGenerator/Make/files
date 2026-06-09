@@ -1,0 +1,2 @@
+hexahedralMeshGenerator.C
+EXE = $(FOAM_USER_APPBIN)/hexahedralMeshGenerator

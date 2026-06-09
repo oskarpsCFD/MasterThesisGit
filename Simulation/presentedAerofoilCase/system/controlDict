@@ -1,0 +1,177 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FoamFile
+{
+    version         2;
+    format          ascii;
+    class           dictionary;
+    object          controlDict;
+}
+
+application     overRhoPimpleDyMFoam;
+
+startFrom       latestTime;
+
+startTime       1;
+
+stopAt          endTime;
+
+runTimeModifiable true;
+
+adjustTimeStep  false;
+
+deltaT          1;
+
+endTime         2;
+
+writeControl    adjustable;
+
+writeInterval   1;
+
+purgeWrite      30;
+
+writeFormat     ascii;
+
+writePrecision  8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+functions
+{
+    MachNo1
+    {
+        type            MachNo;
+        libs            ( fieldFunctionObjects );
+        field           U;
+        region          region0;
+        enabled         true;
+        log             true;
+        timeStart       0;
+        timeEnd         1000;
+        executeControl  timeStep;
+        executeInterval 1;
+        writeControl    writeTime;
+        writeInterval   -1;
+    }
+    stopOnResiduals
+    {
+        type            runTimeControl;
+        libs            ( utilityFunctionObjects );
+        executeControl  timeStep;
+        executeInterval 1;
+        satisfiedAction end;
+        conditions
+        {
+            pRes
+            {
+                type            equationInitialResidual;
+                fields          ( p );
+                value           1e-06;
+                mode            minimum;
+            }
+            Ures
+            {
+                type            equationInitialResidual;
+                fields          ( U );
+                value           1e-06;
+                mode            minimum;
+            }
+        }
+    }
+    solverInfo1
+    {
+        type            solverInfo;
+        libs            ( utilityFunctionObjects );
+        fields          ( p U e rho k omega );
+        writeResidualFields no;
+        executeControl  timeStep;
+        executeInterval 1;
+        writeControl    none;
+    }
+    grad1
+    {
+        type            grad;
+        libs            ( fieldFunctionObjects );
+        field           p;
+        result          grad(p);
+        executeControl  writeTime;
+        writeControl    writeTime;
+    }
+    grad2
+    {
+        type            grad;
+        libs            ( fieldFunctionObjects );
+        field           U;
+        result          grad(U);
+        executeControl  writeTime;
+        writeControl    writeTime;
+    }
+    surfaces1
+    {
+        type            surfaces;
+        libs            ( "libsampling.so" );
+        writeControl    writeTime;
+        writeInterval   1;
+        surfaceFormat   raw;
+        fields          ( p );
+        interpolationScheme cellPointFace;
+        surfaces
+        {
+            airfoilSurface
+            {
+                type            patch;
+                patches         ( airfoil );
+                interpolate     true;
+            }
+        }
+    }
+    wallPressure
+    {
+        type            surfaceFieldValue;
+        libs            ( fieldFunctionObjects );
+        writeControl    timeStep;
+        writeInterval   1;
+        fields          ( p );
+        operation       none;
+        regionType      patch;
+        name            airfoil;
+        writeFields     yes;
+        surfaceFormat   raw;
+        interpolationScheme cellPointFace;
+    }
+    forceCoeffs1
+    {
+        type            forceCoeffs;
+        libs            ( "libforces.so" );
+        patches         ( airfoil );
+        writeControl    writeTime;
+        writeInterval   1;
+        p               p;
+        U               U;
+        rhoInf          1;
+        rho             rhoInf;
+        pRef            0;
+        porosity        no;
+        writeFields     yes;
+        CofR            ( 0.25 0 0 );
+        liftDir         ( -0.03508 0.99938 0 );
+        dragDir         ( 0.99938 0.03508 0 );
+        pitchAxis       ( 0 1 0 );
+        magUInf         256.22;
+        lRef            1;
+        Aref            0.1;
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,17 @@
+To run the case:
+
+wmake all relevant source code into OpenFOAM
+
+Go into presentedAerofoilCase
+Run the following commands:
+
+hexahedralMeshGenerator symmetricAirfoil
+topoSet
+createPatch -overwrite
+
+This is how to create a mesh in OpenFOAM
+
+Running the simulation:
+
+cp -r 0.steadyState/ 0
+./runMeshMovement
