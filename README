@@ -1,7 +1,0 @@
-Generating meshes is done in GenerateMesh.py in meshGeneration. 
-
-To use mesh movement copy the mesh movement directory into the openfoam case and run it with refinement = True in system/rRefinement 
-
-For a basic usecase of the mesh movement check the presented aerofoil case which is the simulated aerofoil from the article 
-
-

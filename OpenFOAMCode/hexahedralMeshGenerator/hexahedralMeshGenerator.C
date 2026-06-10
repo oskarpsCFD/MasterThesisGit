@@ -54,7 +54,7 @@ Description
       - Reuse indices for shared faces (do NOT duplicate shared points).
       
 Author 
-    Oskar P. Sagatun NTNU 2026
+    X
     
     Developed in accordance with the authors master thesis.
     

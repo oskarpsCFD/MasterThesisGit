@@ -36,7 +36,7 @@ Description
     The python script will return a deformation vector to apply to the mesh.  
       
 Author 
-    Oskar P. Sagatun NTNU 2026
+    X
     
     Developed in accordance with the authors master thesis.
     
